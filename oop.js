@@ -36,5 +36,21 @@ function createPerson() {
 
 
 }
+function Employee(name, age) {
+this.name = name;
+this.age = age;
+};
 
+Employee.call(Person);
+ 
+    let main = document.getElementById('main');
+let nameH2 = document.createElement('h2');
+    let age = document.createElement('p');
+    nameH2.textContent = 'name:' + this.name;
+    age.textContent = 'age:' + this.age;
+    main.appendChild(nameH2);
+    main.appendChild(age);
+const the = Object.create(new Employee);
+the.name = 'John';
+the.age = 'Alexis';
 
