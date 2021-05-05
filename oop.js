@@ -39,10 +39,10 @@ function createPerson() {
 function Employee(name, age) {
 this.name = name;
 this.age = age;
-};
+}
 
-Employee.call(Person);
- 
+
+ Employee.render = function() {
     let main = document.getElementById('main');
 let nameH2 = document.createElement('h2');
     let age = document.createElement('p');
@@ -50,7 +50,20 @@ let nameH2 = document.createElement('h2');
     age.textContent = 'age:' + this.age;
     main.appendChild(nameH2);
     main.appendChild(age);
+ }
+
 const the = Object.create(new Employee);
-the.name = 'John';
-the.age = 'Alexis';
+let Bill = new Person("Bill", 45);
+let Sam = new Person("Sam", 72);
+
+Bill.render();
+Sam.render();
+function createPerson() {
+    let name = document.getElementById('name').value;
+    let age = document.getElementById('age').value;
+
+
+    let employee = new Employee(name, age);
+ }
+
 
